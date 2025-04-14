@@ -1,5 +1,5 @@
 variable "project_name" {
-  default = "roboshop"
+  default = "Roboshop"
 }       
 
 variable "cidr_block" {
@@ -8,9 +8,20 @@ variable "cidr_block" {
 
 variable "common_tags" {
   default = {
-    Project = "Roboshop"
     Environment = "DEV"
     Terraform = "true"
     By = "Pavan Kumar Divi"
   }
+}
+
+variable "public_subnet_cidr" {
+  default = ["10.0.1.0/24","10.0.2.0/24"]
+}
+
+variable "private_subnet_cidr" {
+  default = ["10.0.3.0/24","10.0.4.0/24"]
+}
+
+variable "database_subnet_cidr" {
+  default = ["10.0.5.0/24","10.0.6.0/24"]
 }
